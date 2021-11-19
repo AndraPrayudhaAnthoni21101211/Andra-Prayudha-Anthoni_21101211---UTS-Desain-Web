@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Pemesanan Tenda - Mantara Clubs</title>
+
+        <style>
+            body
+            {
+                margin: 0;
+            }
+            .bgimage
+            {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                height: 664px;
+                width: 1375px; 
+                margin: 0;
+                filter: blur(8px);
+            }
+            div
+            {
+                width: 400px;
+                position: absolute;
+                top: 50px;
+                left: 32.5%;
+                border-style: solid;
+                border-width: 3px;
+                border-color: white;
+                padding: 30px;
+                background-color: rgba(0, 0, 0, 0.349);
+            }
+            table
+            {
+                border-style: none;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .judul
+            {
+                background-color: orange;
+                color: white;
+                font-family: cursive; 
+                padding: 9px;
+                border: none;
+                font-size: 22px;
+                border-radius: 15px;
+            }
+            td
+            {
+                color: white;
+                font-family: cursive;
+                border: none;
+            }
+            input[type=text]
+            {
+                padding: 10px;
+                width: 380px;
+                border-style: solid;
+                border-color: #6d6e6a;
+                border-radius: 15px;
+                font-size: 16px;
+            }
+            input[type=text]:disabled
+            {
+                background-color: white;
+            }
+            button
+            {
+                width: 100%;
+                height: 37px;
+                font-family: Righteous;
+                background-color: rgba(35, 192, 241, 0.78);
+                border: none;
+                border-radius: 15px;
+                color: white;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-top: 3px;
+            }
+            button:hover
+            {
+                border-style: solid;
+                border-color: rgb(18, 142, 190);
+                border-width: 3px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function hitung()
+            {
+                var Jumlah_Hari, Jumlah_Tenda, Total_Harga;
+
+                Jumlah_Hari = parseInt(document.getElementById("jhari").value);
+                Jumlah_Tenda = parseInt(document.getElementById("jtenda").value);
+
+                Total_Harga = (Jumlah_Tenda * 50000) * Jumlah_Hari;
+                
+
+                if(isNaN(Jumlah_Hari))
+                {
+                    alert('Harap masukkan pesanan Anda terlebih dahulu');
+                }
+                else if(isNaN(Jumlah_Tenda))
+                {
+                    alert('Harap masukkan pesanan Anda terlebih dahulu');
+                }
+                else if(Jumlah_Tenda >= 13)
+                {
+                    alert('Maaf, Anda hanya dapat memesan kurang dari 12 tenda');
+                    return false;
+                }
+                else if(Jumlah_Hari >= 8)
+                {
+                    alert('Maaf, Anda hanya dapat memesan kurang dari seminggu');
+                    return false;
+                }
+                else if(Jumlah_Tenda <=13 && Jumlah_Hari <=8)
+                {
+                    document.getElementById("totalharga").value = Total_Harga;
+                }
+            }
+
+            function hapus()
+            {
+                document.getElementById("jhari").value = "";
+                document.getElementById("jtenda").value = "";
+                document.getElementById("totalharga").value = "";
+            }
+
+            function validasi()
+            {
+                var Total_Harga;
+
+                Total_Harga = document.getElementById("totalharga").value;
+                Pengambilan_Pesanan = document.getElementById("pengambilanpesanan").value;
+
+                if(Total_Harga == "" && Pengambilan_Pesanan == "")
+                {
+                    alert('Harap masukkan pesanan dan jadwal pengambilan pesanan Anda terlebih dahulu');
+                }
+                else if(isNaN(Total_Harga))
+                {
+                    alert('Harap masukkan pesanan Anda terlebih dahulu');
+                }
+                else if(Total_Harga == "")
+                {
+                    alert('Harap masukkan pesanan Anda terlebih dahulu');
+                }
+                else if(isNaN(Pengambilan_Pesanan))
+                {
+                    alert('Harap masukkan jadwal pengambilan pesanan Anda terlebih dahulu');
+                }
+                else if(Pengambilan_Pesanan = "")
+                {
+                    alert('Harap masukkan jadwal pengambilan pesanan Anda terlebih dahulu');
+                }
+                else if(Total_Harga > 0 && !isNaN(Pengambilan_Pesanan))
+                {
+                    window.location = "http://localhost/desain_web_pariwisata/desa_mantar(form_validasi).html";
+                } 
+            }
+
+            function oke()
+            {
+                var Pengambilan_Pesanan;
+
+                Pengambilan_Pesanan = document.getElementById("pengambilanpesanan").value;
+
+                if(Pengambilan_Pesanan == "")
+                {
+                    alert('Harap masukkan jadwal pengambilan pesanan Anda terlebih dahulu');
+                }
+                else if(isNaN(Pengambilan_Pesanan))
+                {
+                    alert('Harap masukkan jadwal pengambilan pesanan Anda terlebih dahulu');
+                }
+                else if(Pengambilan_Pesanan !="" && !isNaN(Pengambilan_Pesanan))
+                {
+                    alert('Apabila Anda tidak mengambil pesanan lebih dari 3 hari dari jadwal pengambilan pesanan yang telah Anda masukkan, mohon maaf pesanan Anda harus kami batalkan');
+                }
+            }
+
+
+        </script>
+        
+    </head>
+    <body onload="alert ('Silahkan masukkan pesanan anda')">
+        <img src="desa_mantar.jpg" alt="background desa mantar" class="bgimage">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="judul">Mantara Clubs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Berapa tenda yang akan Anda pesan?</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="jtenda" placeholder="Masukkan dalam bentuk angka" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Berapa hari Anda akan menggunakan tenda?</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="jhari" placeholder="Masukkan dalam bentuk angka" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="hitung()">Check</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total harga (Rupiah)</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="totalharga" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="hapus()">Hapus</button></td>
+                    </tr>
+                    <tr>
+                        <td>Kapan Anda akan mengambil pesanan ini? (ddmmyy)</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="pengambilanpesanan" placeholder="Masukkan dalam bentuk angka" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="oke()">Oke</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="validasi()">Validasi</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>    
+    </body>
+</html>

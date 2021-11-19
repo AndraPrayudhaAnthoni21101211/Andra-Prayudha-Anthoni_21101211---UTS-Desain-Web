@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Pemesanan Tenda - Mantara Clubs</title>
+
+        <style>
+            body
+            {
+                margin: 0;
+            }
+            .bgimage
+            {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                height: 664px;
+                width: 1375px; 
+                margin: 0;
+                filter: blur(8px);
+            }
+            div
+            {
+                width: 400px;
+                position: absolute;
+                top: 50px;
+                left: 32.5%;
+                border-style: solid;
+                border-width: 3px;
+                border-color: white;
+                padding: 30px;
+                background-color: rgba(0, 0, 0, 0.349);
+            }
+            table
+            {
+                border-style: none;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .judul
+            {
+                background-color: orange;
+                color: white;
+                font-family: cursive; 
+                padding: 9px;
+                border: none;
+                font-size: 22px;
+                border-radius: 15px;
+            }
+            td
+            {
+                color: white;
+                font-family: cursive;
+                border: none;
+            }
+            input[type=text]
+            {
+                padding: 10px;
+                width: 380px;
+                border-style: solid;
+                border-color: #6d6e6a;
+                border-radius: 15px;
+                font-size: 16px;
+            }
+            input[type=text]:disabled
+            {
+                background-color: white;
+            }
+            button
+            {
+                width: 100%;
+                height: 45px;
+                font-family: Righteous;
+                background-color: rgba(35, 192, 241, 0.78);
+                border: none;
+                border-radius: 15px;
+                color: white;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-top: 9px;
+            }
+            button:hover
+            {
+                border-style: solid;
+                border-color: rgb(18, 142, 190);
+                border-width: 3px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function pesan()
+            {
+                var Nama, Nik, Alamat, Alamat_Email, No_Telepon;
+
+                Nama = document.getElementById("nama").value;
+                Nik = document.getElementById("NIK").value;
+                Alamat = document.getElementById("alamat").value;
+                Alamat_Email = document.getElementById("e-mail").value;
+                No_Telepon = document.getElementById("notelepon").value;
+
+                if(Nama == "" && Nik == "" && Alamat == "" && Alamat_Email == "" && No_Telepon == "")
+                {
+                    alert('Harap lengkapi data diri anda terlebih dahulu');
+                }
+                else if (Nama != "" && Nik != "" && Alamat != "" && Alamat_Email != "" && No_Telepon != "")
+                {
+                    alert('Terima kasih '+Nama+' sudah memesan, Selamat Berwisata!');
+                }
+            }
+        </script>
+        
+    </head>
+    <body onload="alert ('Silahkan masukkan data diri Anda')">
+        <img src="desa_mantar.jpg" alt="background desa mantar" class="bgimage">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="judul">Mantara Clubs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Masukkan nama Anda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="nama" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Masukkan NIK Anda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="NIK" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Masukkan alamat lengkap Anda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="alamat" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Masukkan alamat e-mail Anda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="e-mail" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>Masukkan nomor telepon Anda</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="notelepon" autocomplete="off"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><button onclick="pesan()">Pesan!</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>    
+    </body>
+</html>

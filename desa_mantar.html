@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Pariwisata Desa Mantar</title>
+
+        <style type="text/css">
+            body
+            {
+                background-image: url("desa_mantar.jpg");
+                background-size: 1366px 657px; 
+                background-repeat: no-repeat;
+                font-family: Righteous;
+                margin: 0;
+            }
+            .navbar
+            {
+                padding: 0px;
+                background-color: rgba(255, 255, 255, 0.274);
+                width: 100%;
+                height: 81px;
+            }
+            .navbar-brand
+            {
+                position: absolute;
+                width: 255px;
+                height:50px;
+                left: 30px;
+                top: 18px;
+                font-size: 40px;
+                line-height: 50px;
+                text-decoration: none;
+                font-family: Red rose;
+                color: black;
+            }
+            .s
+            {
+                font-family: red rose;
+            }
+            .s:hover
+            {
+                font-weight: bold;
+            }
+            .beranda
+            {
+                position: absolute;
+                font-weight:bold;
+                right: 561px;
+                top: 38px;
+                color: black;
+                text-decoration: none;
+                font-size: 23px;
+            }
+            .objekwisata
+            {
+                position: absolute;
+                right: 389px;
+                top: 38px;
+                color: black;
+                text-decoration: none;
+                font-size: 23px;
+            }
+            .akomodasi
+            {
+                position: absolute;
+                right: 156px;
+                top: 38px;
+                color: black;
+                text-decoration: none;
+                font-size: 23px;
+            }
+            .wawasan
+            {
+                position: absolute;
+                right: 19px;
+                top: 38px;
+                color:black;
+                text-decoration: none;
+                font-size: 23px;
+            }
+            .pencarian
+            {
+                position: absolute;
+                top: 5px;
+                right: 77px;
+                width: 298px;
+                height: 25px;
+                border: none;
+                border-radius: 35px;
+                padding: 0px 0px 0px 10px;
+                font-size: 20px;
+                font-family: red rose;
+                color: black;
+                background-color: white;
+            }
+            .tombolpencarian
+            {
+                position: absolute;
+                top: 5px;
+                width: 48px;
+                height: 28px;
+                right: 19px;
+                background-color: rgba(255, 184, 0, 0.65);
+                border: none;
+                border-radius: 20px;
+                margin: 0px;
+                cursor: pointer;
+            }
+            .icmagnifier
+            {
+                position:absolute;
+                top:2px;
+                bottom: 2px;
+                left: 14px;
+                right: 14px;
+                width: 24px;
+                height: 24px;
+            }
+            .tombolpencarian:hover
+            {
+                border-style: solid;
+                border-color: black;
+                border-width: 1px;
+            }
+            .footer
+            {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.274); 
+                height: 50px;
+            }
+            .pembuat
+            {
+                position: absolute;
+                left: 450px;
+                bottom: 4px;
+                font-family: 'Times New Roman';
+                font-size: 30px;
+                color: black;
+                opacity: 0.7;
+                padding: 5px;
+            }
+            .text1
+            {
+                position: absolute;
+                left: 48px;
+                top: 303px;
+                font-size: 48px;
+                line-height: 60px;
+            }
+            .text2
+            {
+                position: absolute;
+                left: 48px;
+                bottom: 260px;
+                font-size: 30px;
+            }
+            .tombol1
+            {
+                position: absolute;
+                width: 198px;
+                height: 66px;
+                left: 48px;
+                top: 425px;
+                border-radius: 60px;
+                border: none;
+                padding: 0px 0px 0px 25px;
+                background-color: rgba(255, 184, 0, 0.65);
+                color: black;
+                cursor: pointer;
+            }
+            .tombol2
+            {
+                position: absolute;
+                width: 198px;
+                height: 66px;
+                left: 285px;
+                top: 425px;
+                border-radius: 60px;
+                border: none;
+                font-size: 25px;
+                padding: 0px 0px 0px 25px;
+                background-color: rgba(255, 184, 0, 0.65);
+                color: black;
+                cursor: pointer;
+            }
+            .tombol1:hover, .tombol2:hover
+            {
+                font-weight: bold;
+                border-style: solid;
+                border-width: 2px;
+                border-color: black;
+            }
+            .txtjelajah
+            {
+                position: absolute;
+                top: 17px;
+                bottom: 18px;
+                left: 66px;
+                right: 46px;
+                font-size: 25px;
+                font-family: righteous;
+
+            }
+            .txtvideo
+            {
+                position: absolute;
+                top: 17px;
+                bottom: 18px;
+                left: 66px;
+                right: 46px;
+                font-size: 25px;
+                font-family: righteous;
+
+            }
+            .icdirect
+            {
+                background-image: url("direct.png");
+                width: 35px;
+                height: 35px;
+                float: left;
+                margin: 0px 6px 0px 0px;
+            }
+            .icplay
+            {
+                background-image: url("play.png");
+                width: 35px;
+                height: 35px;
+                float: left;
+                margin: 0px 5px 0px 0px;
+            }
+
+        </style>
+
+    </HEAD>
+    <BODY>
+        <div>
+            <header>
+                <nav class="navbar">
+                    <a href="index.html" class="navbar-brand">Desa Mantar</a>
+                    <a class="s beranda" href="index.html">Beranda</a>
+                    <a class="s objekwisata" href="desa_mantar(2).html">Objek Wisata</a>
+                    <a class="s akomodasi" href="desa_mantar(3).html">Sarana Akomodasi</a>
+                    <a class="s wawasan" href="#">Wawasan</a>
+                    <input type="text" placeholder="Tulis sesuatu..." class="pencarian">
+                    <button class="tombolpencarian"><img src="magnifier.png" alt="iconmagnifier" class="icmagnifier"></button>
+                </nav>
+            </header>
+            <konten>
+                <div class="text1">Kunjungi</div>
+                <div class="text2" >Desa di atas awan dan destinasi unggulan di Sumbawa Barat</div>
+                <div>
+                    <a href="https://www.google.co.id/maps/place/Mantar,+Poto+Tano,+Kabupaten+Sumbawa+Barat,+Nusa+Tenggara+Bar./@-8.644437,116.7789107,13z/data=!3m1!4b1!4m5!3m4!1s0x2dcc69c5f9020201:0xf32d1709e894ae4c!8m2!3d-8.6450837!4d116.8085683"><button type="button" class="tombol1"><img src="direct.png" alt="icondirect" class="icdirect"><text class="txtjelajah">Jelajah</text></button></a>
+                    <a href="https://youtu.be/9ZdU2gG4J9s"><button type="button" class="tombol2"><img src="play.png" alt="iconplay" class="icplay"><text class="txtvideo">Video</text></button></a>
+                </div>    
+            </konten>
+            <footer>
+                <div class="footer">
+                    <div class="pembuat">&copy Desain Web by Andra Prayudha Anthoni</div>
+                </div>
+            </footer>
+        </div>
+    </BODY>
+</html>
